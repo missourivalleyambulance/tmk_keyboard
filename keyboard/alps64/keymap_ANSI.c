@@ -1,48 +1,48 @@
 #include "keymap_common.h"
 
 /*
- * HHKB
+ * Hasu
  */
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* 0: DEFAULT LAYER
  * ,-----------------------------------------------------------.
- * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -| =|BSLS|DEL|
+ * |Esc  |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|  #|Bsp|
  * |-----------------------------------------------------------|
  * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|DEL  |
  * |-----------------------------------------------------------|
- * |Ctrl  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Enter   |
+ * |Caps  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Enter   |
  * |-----------------------------------------------------------|
- * |Shft|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |FN2|
+ * |Shft|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Esc|
  * |-----------------------------------------------------------'
- * |    |GUI |ALT |      Space/FN1    |ALT  |GUI |    |        |
+ * |Ctrl|ALT |GUI |      Space/FN1    |FN2 |Alt |GUI |FN3/Ctrl |
  * `-----------------------------------------------------------'
  */
 [0] =KEYMAP( \
-    ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS, DEL, \
-    TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
-    LCTL,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
-    LSFT,NUBS,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,FN2, \
-    NO,LGUI,LALT,          FN1,                     LALT, LGUI,NO,NO),
+    ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, NUHS, BSPC, \
+    TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,DEL, \
+    CAPS,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
+    LSFT,NUBS,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,ESC, \
+    LCTL,LALT,LGUI,          FN1,                     FN2, RALT,FN3,RCTL),
 
   /* 0: MORGAN LAYER
   * ,-----------------------------------------------------------.
-  * |GRV  |MUTE|VOLD|VOLU|MPRV|MPLY|MNXT| 7| 8| 9| 0| -|BSLS|DEL|
+  * |GRV  |MUTE|VOLD|VOLU|MPRV|MPLY|MNXT| 7| 8| 9| 0| -| =/#|Bsp|
   * |-----------------------------------------------------------|
-  * |Tab  |  Q| UP|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|DEL  |
+  * |Tab  |  Q| UP|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
   * |-----------------------------------------------------------|
-  * |Caps|LEFT|DOWN|RIGHT|  F|  G|  H|  J|  K|  L|  ;|  '|Enter |
+  * |Caps  |LEFT|DOWN|RIGHT|  F|  G|  H|  J|  K|  L|  ;|  '|Enter   |
   * |-----------------------------------------------------------|
-  * |Shft| \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |TRNS|
+  * |Shft|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Esc|
   * |-----------------------------------------------------------'
-  * |    |TRNS |TRNS |         Space         |TRNS |TRNS|  |    |
+  * |Ctrl|Gui |Alt |         Space         |FN2 |Alt |GUI |Ctrl |
   * `-----------------------------------------------------------'
   */
  [1] =KEYMAP( \
-     GRV,MUTE,VOLD,VOLU,MPRV,MPLY,MNXT,   7,   8,   9,   0,   MINS,PPLS, TRNS, TRNS, \
-     TAB, Q,  UP,   E,HOME,   T,   Y,  4,   5,   6,PAST,   LBRC,RBRC,TRNS, \
+     GRV,MUTE,VOLD,VOLU,MPRV,MPLY,MNXT,   7,   8,   9,   0,   MINS,PPLS, NUHS, BSPC, \
+     TAB, Q,  UP,   E,HOME,   T,   Y,   4,   5,   6,PAST,   LBRC,RBRC,BSLS, \
      CAPS,LEFT,DOWN,RIGHT, END,   G,   H,   1,   2,   3,  PSLS,  QUOT,  ENT,  \
-     LSFT,NUBS,Z,   X,   C,   V,   B,   N, F13,   COMM,DOT, SLSH,RSFT,TRNS, \
-     NO,TRNS,TRNS,          TRNS,                     TRNS, RALT,NO,NO),
+     LSFT,NUBS,Z,   X,   C,   V,   B,   N, F13,   COMM,DOT, SLSH,RSFT,ESC, \
+     LCTL,TRNS,TRNS,          TRNS,                     TRNS, RALT,TRNS,TRNS),
 
   /* 0: DEFAULT LAYER
    * ,-----------------------------------------------------------.
@@ -52,17 +52,17 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |Caps  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Enter   |
    * |-----------------------------------------------------------|
-   * |Shft|\|  Z|  X|  FN4|  V|  B|  N|  M|  ,|  .|  /|Shift |FN2|
+   * |Shft|  \|  Z|  X|  FN4|  V|  B|  N|  M|  ,|  .|  /|Shift |Esc|
    * |-----------------------------------------------------------'
-   * |    |TRNS /GUI |      Space/FN1    |TRNS |TRNS |        |     |
+   * |Ctrl|ALT |GUI |      Space/FN1    |FN2 |Alt |FN3/GUI |Ctrl |
    * `-----------------------------------------------------------'
    */
   [2] =KEYMAP( \
-   ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, TRNS, TRNS, \
-   TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,TRNS, \
+   ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, NUHS, BSPC, \
+   TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,DEL, \
    CAPS,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
-   LSFT,NUBS,Z,   X,   FN4,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,TRNS, \
-   NO,TRNS,TRNS,          TRNS,                     TRNS, TRNS,NO,NO),
+   LSFT,NUBS,Z,   X,   FN4,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,ESC, \
+   LCTL,LALT,LGUI,          TRNS,                     TRNS, RALT,TRNS,TRNS),
 
 };
 

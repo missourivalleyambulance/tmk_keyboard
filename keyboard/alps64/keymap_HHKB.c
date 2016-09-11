@@ -39,7 +39,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   */
  [1] =KEYMAP( \
      GRV,MUTE,VOLD,VOLU,MPRV,MPLY,MNXT,   7,   8,   9,   0,   MINS,PPLS, TRNS, TRNS, \
-     TAB, Q,  UP,   E,HOME,   T,   Y,  4,   5,   6,PAST,   LBRC,RBRC,TRNS, \
+     TAB, Q,  UP,   E,HOME,   T,   Y,   4,   5,   6,PAST,   LBRC,RBRC,TRNS, \
      CAPS,LEFT,DOWN,RIGHT, END,   G,   H,   1,   2,   3,  PSLS,  QUOT,  ENT,  \
      LSFT,NUBS,Z,   X,   C,   V,   B,   N, F13,   COMM,DOT, SLSH,RSFT,TRNS, \
      NO,TRNS,TRNS,          TRNS,                     TRNS, RALT,NO,NO),
